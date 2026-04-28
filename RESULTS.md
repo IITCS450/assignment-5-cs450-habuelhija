@@ -7,7 +7,7 @@ Consumer: count 1
 Producer: count 2
 Consumer: count 1
 Consumer: count 0
-... (and so on)
+... (etc)
 
 ## Implementation Details:
 The threading library (uthread.c) handles context switching between 
