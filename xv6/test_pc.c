@@ -1,5 +1,6 @@
 #include "types.h"
 #include "stat.h"
+#include "uthread.h"
 #include "user.h"
 void producer();
 void consumer();
@@ -24,8 +25,8 @@ void consumer() {
 }
 int main() {
   thread_init();
-  thread_create(producer);
-  thread_create(consumer);
+  thread_create(producer, 0);
+thread_create(consumer, 0);
   while(1) thread_yield();
   return 0;
 }
